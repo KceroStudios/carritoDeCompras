@@ -23,9 +23,10 @@ class Navbar extends Component{
             <nav style={styles.nav}>
                 <Logo/>
                 <Carrito 
-                    carrito={carrito}
-                    esCarritoVisible={esCarritoVisible}
-                    />
+                    carrito          ={carrito}
+                    esCarritoVisible ={esCarritoVisible}
+                    mostrarCarrito   ={mostrarCarrito}
+                />
             </nav>
         )
     }

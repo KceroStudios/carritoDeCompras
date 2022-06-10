@@ -34,18 +34,21 @@ class App extends Component {
     })
   }
 
-mostrarCarrito = () => {
-  this.setState({esCarritoVisible: !this.state.esCarritoVisible})
-}
+  mostrarCarrito = () => {
+    if(!this.state.carrito.length){
+      return
+    }
+    this.setState({esCarritoVisible: !this.state.esCarritoVisible})
+  }
 
   render() {
     const{esCarritoVisible} = this.state
     return (
       <div>
         <Navbar 
-          carrito=          {this.state.carrito}
-          esCarritoVisible= {esCarritoVisible}
-          mostrarCarrito=   {this.mostrarCarrito}
+          carrito          = {this.state.carrito}
+          esCarritoVisible = {esCarritoVisible}
+          mostrarCarrito   = {this.mostrarCarrito}
         />
         <Layout>
           <Titulo/>
